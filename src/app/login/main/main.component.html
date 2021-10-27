@@ -1,9 +1,9 @@
-<div class="container">
-    <div class="form">
-        <app-field [fieldType]="'text'" [labelText]="'שם מלא'" [id]="'fullName'"  ></app-field>
-        <app-field [fieldType]="'email'" [labelText]="'דואל'" [id]="'email'" ></app-field>
+<div class="from">
+    <div class="form-wrap">
+        <app-field [fieldType]="'text'" (EmitSource)="changeName($event)" [labelText]="'שם מלא'" [id]="'fullName'"  ></app-field>
+        <app-field [fieldType]="'email'" (EmitSource)="changeEmail($event)" [labelText]="'דואל'" [id]="'email'" ></app-field>
         <div class="center">
-            <button type="button" (click)="doPost()"></button>
+            <button type="button" (click)="doPost()" [value]="btnContent"></button>
         </div>
     </div>
 </div>

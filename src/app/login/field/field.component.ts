@@ -15,14 +15,13 @@ export class FieldComponent implements OnInit {
   @Input()
   labelText:string = '';
   @Output()
-  EmmitSource = new EventEmitter<string>();
+  EmitSource = new EventEmitter<string>();
   constructor() { }
   ngOnInit(): void {
   }
   dochange(event:Event){
     let targrt = event.target as HTMLInputElement;
-    console.log(targrt.value);
-    this.EmmitSource.next(targrt.value);
+    this.EmitSource.next(targrt.value);
   }
 
 }

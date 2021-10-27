@@ -21,11 +21,11 @@ export class MainComponent implements OnInit {
     this.btnContent = 'ממתין לתגובה';
     this.loginservice.postUser(this.user)
   }
-  changeName(name:string){
-    this.user.name = name;
+  changeName(event:string){
+    this.user.name = event;
   }
-  changeEmail(email:string){
-    this.user.email = email;
+  changeEmail(event:string){
+    this.user.email = event;
   }
 
 }

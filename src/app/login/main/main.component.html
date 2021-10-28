@@ -3,7 +3,7 @@
         <app-field [fieldType]="'text'" (EmitSource)="changeName($event)" [labelText]="'שם מלא'" [id]="'fullName'"  ></app-field>
         <app-field [fieldType]="'email'" (EmitSource)="changeEmail($event)" [labelText]="'דואל'" [id]="'email'" ></app-field>
         <div class="center">
-            <button type="button" (click)="doPost()" [value]="btnContent"></button>
+            <button type="button" (click)="doPost()" [value]="btnContent">{{btnContent}}</button>
         </div>
     </div>
 </div>

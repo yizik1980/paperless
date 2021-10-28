@@ -5,8 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AlertComponent } from './components/alert/alert.component';
 import { LoginModule } from './login/login.module';
-
-
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { ToastModule } from 'ng-uikit-pro-standard';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +16,9 @@ import { LoginModule } from './login/login.module';
     BrowserModule,
     LoginModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MDBBootstrapModule.forRoot(),
+    ToastModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

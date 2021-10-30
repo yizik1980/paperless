@@ -1,9 +1,14 @@
-<div class="from">
+<div class="form p-5">
     <div class="form-wrap">
-        <app-field [fieldType]="'text'" (EmitSource)="changeName($event)" [labelText]="'שם מלא'" [id]="'fullName'"  ></app-field>
-        <app-field [fieldType]="'email'" (EmitSource)="changeEmail($event)" [labelText]="'דואל'" [id]="'email'" ></app-field>
-        <div class="center">
-            <button type="button" (click)="doPost()" [value]="btnContent">{{btnContent}}</button>
-        </div>
+        <app-field [fieldType]="'text'" (EmitSource)="changeName($event)" [labelText]="'שם מלא'" [id]="'fullName'">
+        </app-field>
+        <app-field [fieldType]="'email'" (EmitSource)="changeEmail($event)" [labelText]="'דואל'" [id]="'email'">
+        </app-field>
+
+        <button mdbBtn color="info" class="btn btn-primary" class="waves-light" mdbWavesEffect type="button" (click)="doPost()"
+            [value]="btnContent">{{btnContent}}</button>
+
     </div>
+    <div #myToast role="alert" aria-live="assertive" aria-atomic="true" 
+ class="toast fade" data-bs-autohide="false"></div>
 </div>

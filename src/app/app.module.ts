@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { AlertComponent } from './components/alert/alert.component';
 import { LoginModule } from './login/login.module';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
-import { ToastModule } from 'ng-uikit-pro-standard';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,8 +16,7 @@ import { ToastModule } from 'ng-uikit-pro-standard';
     LoginModule,
     AppRoutingModule,
     HttpClientModule,
-    MDBBootstrapModule.forRoot(),
-    ToastModule.forRoot()
+    MDBBootstrapModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
